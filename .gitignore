@@ -2,4 +2,5 @@
 *.rej
 *.orig
 *.def.h
+*.def*
 st
