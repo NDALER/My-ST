@@ -189,6 +189,7 @@ static MouseShortcut mshortcuts[] = {
 //{ ControlMask|ShiftMask,     Button5, zoom,        {.f = -1} },
 //{ ControlMask|ShiftMask,     Button3, zoomreset,   {.f =  0} },
    { XK_ANY_MOD,  Button2, selpaste,    {.i = 0},1 },
+   { XK_ANY_MOD,  Button3, clipcopy,    {.i =  0} },
    { ShiftMask,   Button4, ttysend,     {.s = "\033[5;2~"} },
    { XK_ANY_MOD,  Button4, ttysend,     {.s = "\031"} },
    { ShiftMask,   Button5, ttysend,     {.s = "\033[6;2~"} },
