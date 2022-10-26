@@ -108,6 +108,10 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 0.945;
 
+static char *openurlcmd[] = { "/bin/sh", "-c",
+	"xurls | dmenu -c -l 10 | xclip -selection clipboard ",
+	"externalpipe", NULL };
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
@@ -225,6 +229,7 @@ static Shortcut shortcuts[] = {
    /* { TERMMOD,              XK_K,           kscrollup,      {.i = +1.5} , 0, /1* !alt *1/ -1 }, */
    /* { TERMMOD,              XK_J,           kscrolldown,    {.i = +1.5} , 0, /1* !alt *1/ -1 }, */
 	{ TERMMOD,              XK_L,           copyurl,        {.i =  0} },
+   { TERMMOD,              XK_U,           externalpipe,   { .v = openurlcmd } },
 };
 
 /*
