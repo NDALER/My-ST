@@ -5,3 +5,4 @@ hb.o
 *.rej
 x.o
 st.o
+test
