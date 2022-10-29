@@ -1,6 +1,7 @@
-*.o
-*.rej
-*.orig
-*.def.h
-*.def*
 st
+*.def*
+hb.o
+*.orig
+*.rej
+x.o
+st.o
