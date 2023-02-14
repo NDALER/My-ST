@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /*
  * appearance
  *
@@ -11,8 +10,7 @@ static char *font2[] ={"Noto Sans Jp:pixelsize=16:antialias=true:autohint=true"}
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 
-
-static int borderpx =3;
+static float borderpx =1.2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -22,7 +20,7 @@ static int borderpx =3;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/fish";
+static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -139,7 +137,6 @@ static const char *colorname[] = {
   [256] = "#282a36", /* background */
   [257] = "#f8f8f2", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)

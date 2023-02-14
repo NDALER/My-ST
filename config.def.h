@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /*
  * appearance
  *
@@ -11,8 +10,7 @@ static char *font2[] ={"Noto Sans Jp:pixelsize=16:antialias=true:autohint=true"}
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 
-
-static int borderpx =3;
+static float borderpx =1.2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -22,7 +20,7 @@ static int borderpx =3;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/fish";
+static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -140,7 +138,6 @@ static const char *colorname[] = {
   [257] = "#f8f8f2", /* foreground */
 };
 
-
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
@@ -198,8 +195,8 @@ static MouseShortcut mshortcuts[] = {
 //{ ControlMask|ShiftMask,     Button4, zoom,        {.f = +1} },
 //{ ControlMask|ShiftMask,     Button5, zoom,        {.f = -1} },
 //{ ControlMask|ShiftMask,     Button3, zoomreset,   {.f =  0} },
-   { XK_ANY_MOD,  Button2, selpaste,    {.i = 0},1 },
-   { XK_ANY_MOD,  Button3, clipcopy,    {.i =  0} },
+   { XK_ANY_MOD,  Button3, selpaste,    {.i = 0},1 },
+   /* { XK_ANY_MOD,  Button3, clipcopy,    {.i =  0} }, */
    { ShiftMask,   Button4, ttysend,     {.s = "\033[5;2~"} },
    { XK_ANY_MOD,  Button4, ttysend,     {.s = "\031"} },
    { ShiftMask,   Button5, ttysend,     {.s = "\033[6;2~"} },
