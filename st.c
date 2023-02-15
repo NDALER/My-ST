@@ -2090,18 +2090,11 @@ strhandle(void)
 		case 104: /* color reset */
 			j = (narg > 1) ? atoi(strescseq.args[1]) : -1;
 
-<<<<<<< HEAD
-			if (p && !strcmp(p, "?"))
-				osc4_color_response(j);
-			else if (xsetcolorname(j, p)) {
-				if (par == 104 && narg <= 1)
-=======
 			if (p && !strcmp(p, "?")) {
-				osc_color_response(j, 0, 1);
+				osc_color_response(j, 0);
 			} else if (xsetcolorname(j, p)) {
 				if (par == 104 && narg <= 1) {
 					xloadcols();
->>>>>>> master
 					return; /* color reset without parameter */
 				}
 				fprintf(stderr, "erresc: invalid color j=%d, p=%s\n",
