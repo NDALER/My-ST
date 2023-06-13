@@ -55,7 +55,7 @@ int allowwindowops = 0;
  * Synchronized-Update timeout in ms
  * https://gitlab.com/gnachman/iterm2/-/wikis/synchronized-updates-spec
  */
-static uint su_timeout = 200;
+static int su_timeout = 200;
 
 /*
  * draw latency range in ms - from new content/keypress/etc until drawing.
